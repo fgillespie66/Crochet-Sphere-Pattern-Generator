@@ -3,22 +3,35 @@
 		<title>
 			Crochet Sphere Pattern Generator
 		</title>
-		<script type = "text/javascript" src  = "CrochetPatternGenerator.js">
-		</script>
+        <link href='https://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' type='text/css'>
+		<script src="jquery-1.12.1.min.js"></script>
+        <script type = "text/javascript" src = "backgrounds.json"></script>
+		<script type="text/javascript" src="CrochetPatternGenerator.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	
 	<body>
-		Gauge of Stitch: <input type = "text" id = "gauge" > <br>
-		Radius of Sphere: <input type = "text" id = "radius" > <br>
-		Height of Stitch: <input type = "text" id = "height" > <br>
-		
-		<button onClick = "CrochetPatternGenerator(document.getElementById('gauge').value, document.getElementById('radius').value, document.getElementById('height').value)">
-			Generate
-		</button>
-
-		<div id = "patternText">
-
+		<div class="inputBox">
+			Gauge of Stitch: <input type="text" id="gauge" value="3.64"> <br>
+			Radius of Sphere: <input type="text" id="radius" value="18"> <br>
+			Height of Stitch: <input type="text" id="height" value="1"> <br>
+			
+			<button onClick="CrochetPatternGenerator(document.getElementById('gauge').value, document.getElementById('radius').value, document.getElementById('height').value)" class="generate right">
+				Generate
+			</button>
 		</div>
+
+		<div id="patternText" class="textBlock leftBlock" style="display:none;"></div>
+		<div id="currentRow" class="textBlock rightBlock" style="display:none;">
+			<span id="rowName" class="header"> </span> <br>
+			<span id="rowTotal" class="large"> </span> <br>
+			<span id="rowIncr" class="large"> </span> <br> <br>
+			<button onClick="changeRowBy(-1)" class="smallButton"> Previous Row </button>
+			<button onClick="changeRowBy(1)" class="smallButton"> Next Row </button> <br>
+			Jump to Row <input type="text" id="rowNumber" class="skinny">
+			<button onClick="changeRowTo(document.getElementById('rowNumber').value)"> Go!</button>
+		</div>
+		<div id="inputid"> </div>
 	</body>
 
 </html>

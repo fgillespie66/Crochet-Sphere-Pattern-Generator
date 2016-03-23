@@ -1,0 +1,141 @@
+html {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {	
+    font-family: 'Raleway', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+div.inputBox {
+	background-color: white;
+	border-radius: 10px;
+	padding: 30px;
+	padding-bottom: 20px;
+	padding-right: 20px;
+	width: 400px;
+	margin: auto;
+	margin-top: 20px;
+	overflow: auto;
+}
+
+input[type=text] {
+	padding: 2px;
+    outline: none;
+    border: 1px solid #cdcdcd;
+    border-color: rgba(0,0,0,.15);
+    background-color: white;
+    border-radius: 2px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    margin: 2px 5px;
+}
+
+input[type=text]:hover {
+	border-color: rgba(10, 150, 200,0.5);
+}
+
+input[type=text]:focus {
+	border-color: rgba(10, 150, 200, 1.0);	
+}
+
+input[type=text].skinny {
+	width: 50px;
+}
+
+button.generate {
+	margin-top: 10px;
+	background-color: #0050DB;
+	border: none;
+	color: white;
+	border-radius: 10px;
+	padding: 5px 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+button.generate:hover {
+	background-color: #0F67FF;
+	cursor: pointer;
+	border: none;
+	position: relative;
+	top: 1px;
+}
+
+button.generate:focus {
+	outline: 0;
+}
+
+.right {
+	float: right;
+}
+
+button.smallButton {
+	margin-top: 10px;
+	background-color: #0050DB;
+	border: none;
+	color: white;
+	border-radius: 5px;
+	padding: 2px 5px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+button.smallButton:hover {
+	background-color: #0F67FF;
+	cursor: pointer;
+	border: none;
+	position: relative;
+	top: 1px;
+}
+
+button.smallButton:focus {
+	outline: 0;
+}
+
+div.textBlock {
+	vertical-align: top;
+	display: inline-block;
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+	margin: 20px;
+}
+
+div.leftBlock {
+	padding-left: 0px;
+	padding-right: 0px;
+	max-height: 400px;
+	overflow-y: scroll;
+}
+
+div.rightBlock {
+	margin-bottom: 0px;
+}
+table, tr, td {
+	border: 0px solid black;
+	border-collapse: collapse;
+}
+td.stitchTableCell {
+	padding: 3px 10px;
+}
+
+tr.selected {
+	border-radius: 10px;
+	background-color: #aabbff;
+}
+
+span.header {
+	font-size: 300%;
+}
+
+span.large {
+	font-size: 200%;
+}
