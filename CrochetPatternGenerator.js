@@ -13,11 +13,6 @@ function CrochetPatternGenerator(gauge, radius, stitchHeight) {
 		var circumferenceOfNextRow = Math.floor(2*Math.PI*radius*Math.sin((i+1)*stitchHeight/radius)*gauge)
 		var increaseAmount = circumferenceOfNextRow - previousCircumferenceOfNextRow
 		pattern[i] = [previousCircumferenceOfNextRow, increaseAmount]
-		// if (increaseAmount > 0) {
-		// 	document.getElementById("patternText").innerHTML += "Row " + i + " (" + previousCircumferenceOfNextRow + " stitches total): increase by " + increaseAmount + " stitches <br>" 
-		// } else {
-		// 	document.getElementById("patternText").innerHTML += "Row " + i + " (" + previousCircumferenceOfNextRow + " stitches total): decrease by " + Math.abs(increaseAmount) + " stitches <br>" 
-		// }
 		previousCircumferenceOfNextRow = circumferenceOfNextRow
 	}
 	changeRowTo(0)
@@ -66,8 +61,10 @@ function changeRowTo(n) {
 		$("#rowTotal").text(pattern[n][0] + " stitches total")
 		if (pattern[n][1] >= 0) {
 			$("#rowIncr").text("increase by " + pattern[n][1] + " stitches")
+		$("#incrDist").text("~" + Math.floor(Math.abs(pattern[n][0] / pattern[n][1])) + " stitches between increases")
 		} else {
 			$("#rowIncr").text("decrease by " + Math.abs(pattern[n][1]) + " stitches")
+		$("#incrDist").text("~" + Math.floor(Math.abs(pattern[n][0] / pattern[n][1])) + " stitches between decreases")
 		}
 		printPattern();
 	}
