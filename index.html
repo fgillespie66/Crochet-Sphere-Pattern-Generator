@@ -12,9 +12,32 @@
 	
 	<body>
 		<div class="inputBox">
-			Gauge of Stitch: <input type="text" id="gauge" value="3.64"> <br>
-			Radius of Sphere: <input type="text" id="radius" value="18"> <br>
-			Height of Stitch: <input type="text" id="height" value="0.75"> <br>
+			<table>
+				<tr>
+					<td>
+						Gauge of Stitch [stitches/inch]:
+					</td>
+					<td>
+						<input type="text" id="gauge" value="3.64">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Radius of Sphere [inches]:
+					</td>
+					<td>
+						<input type="text" id="radius" value="18">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Height of Stitch [inches]:
+					</td>
+					<td>
+						<input type="text" id="height" value="0.75">
+					</td>
+				</tr>
+			</table>
 			
 			<button onClick="CrochetPatternGenerator(document.getElementById('gauge').value, document.getElementById('radius').value, document.getElementById('height').value)" class="generate right">
 				Generate
