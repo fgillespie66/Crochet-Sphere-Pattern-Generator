@@ -62,7 +62,7 @@ function changeRowTo(n) {
 	if (n == parseInt(n, 10) && n >= 0 && n < pattern.length) {
 		row = parseInt(n, 10)
 
-		$("#rowName").text("Row " + n)
+		$("#rowName").text("Row " + n + " of " + (pattern.length - 1))
 		$("#rowTotal").text(pattern[n][0] + " stitches total")
 		if (pattern[n][1] >= 0) {
 			$("#rowIncr").text("increase by " + pattern[n][1] + " stitches")
