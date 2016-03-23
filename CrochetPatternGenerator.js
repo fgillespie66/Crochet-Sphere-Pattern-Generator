@@ -54,13 +54,13 @@ function printPattern() {
 }
 
 function changeRowBy(n) {
-	if (n === parseInt(n, 10))
+	if (n == parseInt(n, 10))
 		changeRowTo(row + parseInt(n))
 }
 
 function changeRowTo(n) {
-	if (n === parseInt(n, 10) && n >= 0 && n < pattern.length) {
-		row = n
+	if (n == parseInt(n, 10) && n >= 0 && n < pattern.length) {
+		row = parseInt(n, 10)
 
 		$("#rowName").text("Row " + n)
 		$("#rowTotal").text(pattern[n][0] + " stitches total")
